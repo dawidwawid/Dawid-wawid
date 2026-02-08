@@ -5,16 +5,16 @@ import { useEffect, useState } from "react";
 
 import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
-import { routes, display, person, about, blog, work, gallery } from "@/resources";
+import { routes, display, about, blog, work, gallery } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 
 type TimeDisplayProps = {
   timeZone: string;
-  locale?: string; // Optionally allow locale, defaulting to 'en-GB'
+  locale?: string;
 };
 
-const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" }) => {
+const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "pl-PL" }) => {
   const [currentTime, setCurrentTime] = useState("");
 
   useEffect(() => {
@@ -73,8 +73,9 @@ export const Header = () => {
         }}
       >
         <Row paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
-          {display.location && <Row s={{ hide: true }}>{person.location}</Row>}
+          {display.location && <Row s={{ hide: true }}>IT’S FRACTAL</Row>}
         </Row>
+
         <Row fillWidth horizontal="center">
           <Row
             background="page"
@@ -89,33 +90,32 @@ export const Header = () => {
               {routes["/"] && (
                 <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
               )}
+
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
+
               {routes["/about"] && (
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
                       prefixIcon="person"
                       href="/about"
-                      label={about.label}
+                      label="O nas"
                       selected={pathname === "/about"}
                     />
                   </Row>
                   <Row hide s={{ hide: false }}>
-                    <ToggleButton
-                      prefixIcon="person"
-                      href="/about"
-                      selected={pathname === "/about"}
-                    />
+                    <ToggleButton prefixIcon="person" href="/about" selected={pathname === "/about"} />
                   </Row>
                 </>
               )}
+
               {routes["/work"] && (
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
                       prefixIcon="grid"
                       href="/work"
-                      label={work.label}
+                      label="Realizacje"
                       selected={pathname.startsWith("/work")}
                     />
                   </Row>
@@ -128,13 +128,14 @@ export const Header = () => {
                   </Row>
                 </>
               )}
+
               {routes["/blog"] && (
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
                       prefixIcon="book"
                       href="/blog"
-                      label={blog.label}
+                      label="Poradniki"
                       selected={pathname.startsWith("/blog")}
                     />
                   </Row>
@@ -147,13 +148,14 @@ export const Header = () => {
                   </Row>
                 </>
               )}
+
               {routes["/gallery"] && (
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
                       prefixIcon="gallery"
                       href="/gallery"
-                      label={gallery.label}
+                      label="Galeria"
                       selected={pathname.startsWith("/gallery")}
                     />
                   </Row>
@@ -166,6 +168,7 @@ export const Header = () => {
                   </Row>
                 </>
               )}
+
               {display.themeSwitcher && (
                 <>
                   <Line background="neutral-alpha-medium" vert maxHeight="24" />
@@ -175,16 +178,11 @@ export const Header = () => {
             </Row>
           </Row>
         </Row>
+
         <Flex fillWidth horizontal="end" vertical="center">
-          <Flex
-            paddingRight="12"
-            horizontal="end"
-            vertical="center"
-            textVariant="body-default-s"
-            gap="20"
-          >
+          <Flex paddingRight="12" horizontal="end" vertical="center" textVariant="body-default-s" gap="20">
             <Flex s={{ hide: true }}>
-              {display.time && <TimeDisplay timeZone={person.location} />}
+              {display.time && <TimeDisplay timeZone="Europe/Warsaw" />}
             </Flex>
           </Flex>
         </Flex>
