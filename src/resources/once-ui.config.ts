@@ -14,7 +14,7 @@ import {
 import { home } from "./index";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://demo.magic-portfolio.com";
+const baseURL: string = "https://itsfractal.com";
 
 const routes: RoutesConfig = {
   "/": true,
@@ -33,7 +33,7 @@ const display: DisplayConfig = {
 // Enable password protection on selected routes
 // Set password in the .env file, refer to .env.example
 const protectedRoutes: ProtectedRoutesConfig = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
+  // "/work/mercedes-v-class-carbon-kit": true,
 };
 
 // Import and set font for each variant
@@ -74,12 +74,12 @@ const fonts: FontsConfig = {
 // default customization applied to the HTML in the main layout.tsx
 const style: StyleConfig = {
   theme: "system", // dark | light | system
-  neutral: "gray", // sand | gray | slate | custom
+  neutral: "slate", // sand | gray | slate | custom
   brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  accent: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  accent: "orange", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
   solid: "contrast", // color | contrast
   solidStyle: "flat", // flat | plastic
-  border: "playful", // rounded | playful | conservative
+  border: "rounded", // rounded | playful | conservative
   surface: "translucent", // filled | translucent
   transition: "all", // all | micro | macro
   scaling: "100", // 90 | 95 | 100 | 105 | 110
@@ -141,7 +141,8 @@ const effects: EffectsConfig = {
 };
 
 const mailchimp: MailchimpConfig = {
-  action: "https://url/subscribe/post?parameters",
+  // wklej tutaj swój prawdziwy URL z Mailchimp (action z embedu formularza)
+  action: "https://YOUR_MAILCHIMP_URL/subscribe/post?u=XXX&id=YYY",
   effects: {
     mask: {
       cursor: true,
@@ -186,18 +187,18 @@ const mailchimp: MailchimpConfig = {
 
 // default schema data
 const schema: SchemaConfig = {
-  logo: "",
+  logo: "/images/logo.svg",
   type: "Organization",
-  name: "Once UI",
+  name: "IT’S FRACTAL",
   description: home.description,
-  email: "lorant@once-ui.com",
+  email: "kontakt@itsfractal.pl",
 };
 
 // social links
 const sameAs: SameAsConfig = {
-  threads: "https://www.threads.com/@once_ui",
-  linkedin: "https://www.linkedin.com/company/once-ui/",
-  discord: "https://discord.com/invite/5EyAQ4eNdS",
+  instagram: "https://www.instagram.com/its.fractal",
+  tiktok: "https://www.tiktok.com/",
+  youtube: "https://www.youtube.com/",
 };
 
 // social sharing configuration for blog posts
@@ -206,7 +207,7 @@ const socialSharing: SocialSharingConfig = {
   platforms: {
     x: true,
     linkedin: true,
-    facebook: false,
+    facebook: true,
     pinterest: false,
     whatsapp: false,
     reddit: false,
