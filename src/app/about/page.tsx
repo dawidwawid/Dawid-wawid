@@ -19,10 +19,11 @@ import React from "react";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: about.title,
-    description: about.description,
+    title: "O nas — IT’S FRACTAL",
+    description:
+      "IT’S FRACTAL to premium automotive studio: PPF, detailing, tuning i carbon. Projektujemy i realizujemy modyfikacje z naciskiem na jakość, dopasowanie i efekt.",
     baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent(about.title)}`,
+    image: `/api/og/generate?title=${encodeURIComponent("IT’S FRACTAL — O nas")}`,
     path: about.path,
   });
 }
@@ -50,21 +51,23 @@ export default function About() {
       items: about.technical.skills.map((skill) => skill.title),
     },
   ];
+
   return (
     <Column maxWidth="m">
       <Schema
         as="webPage"
         baseURL={baseURL}
-        title={about.title}
-        description={about.description}
+        title="O nas — IT’S FRACTAL"
+        description="IT’S FRACTAL to premium automotive studio: PPF, detailing, tuning i carbon. Projektujemy i realizujemy modyfikacje z naciskiem na jakość, dopasowanie i efekt."
         path={about.path}
-        image={`/api/og/generate?title=${encodeURIComponent(about.title)}`}
+        image={`/api/og/generate?title=${encodeURIComponent("IT’S FRACTAL — O nas")}`}
         author={{
-          name: person.name,
+          name: "IT’S FRACTAL",
           url: `${baseURL}${about.path}`,
           image: `${baseURL}${person.avatar}`,
         }}
       />
+
       {about.tableOfContent.display && (
         <Column
           left="0"
@@ -77,7 +80,8 @@ export default function About() {
           <TableOfContents structure={structure} about={about} />
         </Column>
       )}
-      <Row fillWidth s={{ direction: "column"}} horizontal="center">
+
+      <Row fillWidth s={{ direction: "column" }} horizontal="center">
         {about.avatar.display && (
           <Column
             className={styles.avatar}
@@ -109,6 +113,7 @@ export default function About() {
             )}
           </Column>
         )}
+
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
           <Column
             id={about.intro.title}
@@ -133,7 +138,7 @@ export default function About() {
                 }}
               >
                 <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Row paddingX="8">Schedule a call</Row>
+                <Row paddingX="8">Umów konsultację</Row>
                 <IconButton
                   href={about.calendar.link}
                   data-border="rounded"
@@ -142,16 +147,18 @@ export default function About() {
                 />
               </Row>
             )}
+
             <Heading className={styles.textAlign} variant="display-strong-xl">
-              {person.name}
+              IT’S FRACTAL
             </Heading>
             <Text
               className={styles.textAlign}
               variant="display-default-xs"
               onBackground="neutral-weak"
             >
-              {person.role}
+              Premium Automotive Studio — PPF • Detailing • Tuning • Carbon
             </Text>
+
             {social.length > 0 && (
               <Row
                 className={styles.blockAlign}
@@ -164,34 +171,34 @@ export default function About() {
                 data-border="rounded"
               >
                 {social
-                      .filter((item) => item.essential)
-                      .map(
-                  (item) =>
-                    item.link && (
-                      <React.Fragment key={item.name}>
-                        <Row s={{ hide: true }}>
-                          <Button
-                            key={item.name}
-                            href={item.link}
-                            prefixIcon={item.icon}
-                            label={item.name}
-                            size="s"
-                            weight="default"
-                            variant="secondary"
-                          />
-                        </Row>
-                        <Row hide s={{ hide: false }}>
-                          <IconButton
-                            size="l"
-                            key={`${item.name}-icon`}
-                            href={item.link}
-                            icon={item.icon}
-                            variant="secondary"
-                          />
-                        </Row>
-                      </React.Fragment>
-                    ),
-                )}
+                  .filter((item) => item.essential)
+                  .map(
+                    (item) =>
+                      item.link && (
+                        <React.Fragment key={item.name}>
+                          <Row s={{ hide: true }}>
+                            <Button
+                              key={item.name}
+                              href={item.link}
+                              prefixIcon={item.icon}
+                              label={item.name}
+                              size="s"
+                              weight="default"
+                              variant="secondary"
+                            />
+                          </Row>
+                          <Row hide s={{ hide: false }}>
+                            <IconButton
+                              size="l"
+                              key={`${item.name}-icon`}
+                              href={item.link}
+                              icon={item.icon}
+                              variant="secondary"
+                            />
+                          </Row>
+                        </React.Fragment>
+                      ),
+                  )}
               </Row>
             )}
           </Column>
