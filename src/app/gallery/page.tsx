@@ -4,10 +4,11 @@ import { baseURL, gallery, person } from "@/resources";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: gallery.title,
-    description: gallery.description,
+    title: "Galeria — IT’S FRACTAL",
+    description:
+      "Galeria realizacji IT’S FRACTAL: PPF, detailing, tuning i carbon. Zobacz projekty, detale i efekt końcowy.",
     baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent(gallery.title)}`,
+    image: `/api/og/generate?title=${encodeURIComponent("IT’S FRACTAL — Galeria")}`,
     path: gallery.path,
   });
 }
@@ -18,12 +19,12 @@ export default function Gallery() {
       <Schema
         as="webPage"
         baseURL={baseURL}
-        title={gallery.title}
-        description={gallery.description}
+        title="Galeria — IT’S FRACTAL"
+        description="Galeria realizacji IT’S FRACTAL: PPF, detailing, tuning i carbon. Zobacz projekty, detale i efekt końcowy."
         path={gallery.path}
-        image={`/api/og/generate?title=${encodeURIComponent(gallery.title)}`}
+        image={`/api/og/generate?title=${encodeURIComponent("IT’S FRACTAL — Galeria")}`}
         author={{
-          name: person.name,
+          name: "IT’S FRACTAL",
           url: `${baseURL}${gallery.path}`,
           image: `${baseURL}${person.avatar}`,
         }}
