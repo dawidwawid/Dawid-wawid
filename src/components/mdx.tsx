@@ -78,11 +78,11 @@ function createImage({ alt, src, ...props }: MediaProps & { src: string }) {
 }
 
 function slugify(str: string): string {
-  const strWithAnd = str.replace(/&/g, " and "); // Replace & with 'and'
+  const strWithAnd = str.replace(/&/g, " i "); // Zamień & na 'i'
   return transliterate(strWithAnd, {
     lowercase: true,
-    separator: "-", // Replace spaces with -
-  }).replace(/\-\-+/g, "-"); // Replace multiple - with single -
+    separator: "-",
+  }).replace(/\-\-+/g, "-");
 }
 
 function createHeading(as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6") {
@@ -122,11 +122,9 @@ function createInlineCode({ children }: { children: ReactNode }) {
 }
 
 function createCodeBlock(props: any) {
-  // For pre tags that contain code blocks
   if (props.children && props.children.props && props.children.props.className) {
     const { className, children } = props.children.props;
 
-    // Extract language from className (format: language-xxx)
     const language = className.replace("language-", "");
     const label = language.charAt(0).toUpperCase() + language.slice(1);
 
@@ -146,7 +144,6 @@ function createCodeBlock(props: any) {
     );
   }
 
-  // Fallback for other pre tags or empty code blocks
   return <pre {...props} />;
 }
 
