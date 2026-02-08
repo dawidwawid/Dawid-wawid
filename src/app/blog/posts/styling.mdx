@@ -1,83 +1,60 @@
 ---
-title: "Styling your portfolio"
-summary: "Magic Portfolio's styling is based on Once UI's customization through data-attributes."
+title: "Styl IT’S FRACTAL — czemu wygląda „premium”, a nie jak każda strona w branży"
+summary: "Nie chodzi o bajery. Chodzi o spójność: kolory, kontrast, światło i detale — tak samo jak w naszych realizacjach."
 image: "/images/gallery/horizontal-3.jpg"
-publishedAt: "2025-04-21"
-tag: "Magic Portfolio"
+publishedAt: "2026-02-08"
+tag: "Behind the scenes"
 ---
 
 ## Global style
 
-Magic Portfolio's styling is based on Once UI's customization through data-attributes. You can generate a custom color palette for brand, accent and neutral colors on [Once UI](https://once-ui.com/customize) where you'll find instructions on how to apply it.
+W IT’S FRACTAL wszystko ma ten sam vibe: precyzja, kontrast, ciemne tło, mocny akcent.
+Tak jak przy aucie — detale robią różnicę.
+
+To nie jest “ładna strona”. To ma wyglądać jak studio premium.
 
 <CodeBlock
-    marginBottom="16"
-    codes={[
-  {
-    code:
-`theme:       'dark',         // dark | light
-neutral:     'gray',         // sand | gray | slate
-brand:       'blue',         // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-accent:      'indigo',       // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-solid:       'contrast',     // color | contrast
-solidStyle:  'flat',         // flat | plastic
-border:      'playful',      // rounded | playful | conservative
-surface:     'translucent',  // filled | translucent
-transition:  'all',          // all | micro | macro
-scaling:     '100',          // 90 | 95 | 100 | 105 | 110`, 
-    language: "tsx",
-    label: "src/app/resources/config.js"
-  }
-]} />
+  marginBottom="16"
+  codes={[
+    {
+      code:
+`Ustawienia stylu (IT’S FRACTAL):
+theme:      'system'
+neutral:    'slate'
+brand:      'cyan'
+accent:     'orange'
+solid:      'contrast'
+solidStyle: 'flat'
+border:     'rounded'
+surface:    'translucent'
+transition: 'all'
+scaling:    '100'`,
+      language: "text",
+      label: "Style DNA"
+    }
+  ]}
+/>
 
 ## Background effect
 
-There's a pre-configured background in `layout.tsx` that you can modify in the config file. Set graphic elements such as gradient, dots, lines, and grid and configure their appearance.
+Tło ma robić klimat, ale nie może przeszkadzać w czytaniu i oglądaniu zdjęć.
+Dlatego efekty są delikatne — mają “podbić” premium, a nie odciągać uwagę od realizacji.
 
 <CodeBlock
-    codeHeight={24}
-    marginBottom="16"
-    codes={[
-  {
-    code:
-`const effects = {
-    mask: {
-      cursor: false,
-      x: 50,
-      y: 0,
-      radius: 100
-    },
-    gradient: {
-      display: true,
-      x: 50,
-      y: -25,
-      width: 100,
-      height: 100,
-      tilt: 0,
-      colorStart: 'accent-background-strong',
-      colorEnd: 'static-transparent',
-      opacity: 50
-    },
-    dots: {
-      display: true,
-      size: 2,
-      color: 'brand-on-background-weak',
-      opacity: 20
-    },
-    lines: {
-      display: false,
-      color: 'neutral-alpha-weak',
-      opacity: 100
-    },
-    grid: {
-      display: false,
-      color: 'neutral-alpha-weak',
-      opacity: 100,
-      width: 'var(--static-space-32)',
-      height: 'var(--static-space-32)'
+  codeHeight={24}
+  marginBottom="16"
+  codes={[
+    {
+      code:
+`Efekty tła (skrót):
+- subtelne dots (tekstura)
+- brak krzykliwych gradientów
+- czysto i nowocześnie`,
+      language: "text",
+      label: "Background"
     }
-}`, 
-    language: "tsx",
-    label: "src/app/resources/config.js"
-  }
-]} />
+  ]}
+/>
+
+Najważniejsze jest to, że całość wygląda spójnie:
+tak samo na telefonie, tak samo na desktopie — i zawsze premium.
