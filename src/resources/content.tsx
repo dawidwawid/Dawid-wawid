@@ -2,49 +2,41 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "IT’S",
+  lastName: "FRACTAL",
+  name: "IT’S FRACTAL",
+  role: "Premium Automotive Studio",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "kontakt@itsfractal.pl",
+  location: "Europe/Warsaw", // IANA time zone identifier (np. 'Europe/Warsaw')
+  languages: ["Polski", "English"],
 };
 
 const newsletter: Newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  title: <>Dołącz do newslettera IT’S FRACTAL</>,
+  description: <>Nowe realizacje, premiery projektów i dostępne terminy — bez spamu.</>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
-  {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system",
-    essential: true,
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
+  // Uzupełnij swoje linki (to są bezpieczne placeholdery)
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
+    link: "https://www.instagram.com/",
+    essential: true,
   },
   {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    name: "TikTok",
+    icon: "tiktok",
+    link: "https://www.tiktok.com/",
     essential: true,
+  },
+  {
+    name: "YouTube",
+    icon: "youtube",
+    link: "https://www.youtube.com/",
+    essential: false,
   },
   {
     name: "Email",
@@ -58,34 +50,38 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  title: "IT’S FRACTAL — Premium Automotive Studio",
+  description:
+    "PPF • Detailing • Tuning • Carbon • Indywidualne projekty. Premium modyfikacje i ochrona aut — precyzja, jakość, efekt.",
+  headline: <>IT’S FRACTAL</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">IT’S FRACTAL</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Pakiety Carbon — projekt + produkcja + montaż
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      Premium automotive studio — PPF, detailing, tuning i carbon.
+      <br />
+      Projekty dopasowane 1:1 do auta, procesu i efektu, który ma robić wrażenie.
+    </>
   ),
 };
 
 const about: About = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "O nas",
+  title: "O nas — IT’S FRACTAL",
+  description:
+    "IT’S FRACTAL — premium automotive studio: PPF, detailing, tuning i carbon. Precyzja, dopasowanie i efekt końcowy.",
   tableOfContent: {
     display: true,
     subItems: false,
@@ -99,130 +95,111 @@ const about: About = {
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Kim jesteśmy",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        IT’S FRACTAL to studio premium, w którym łączymy ochronę, estetykę i modyfikacje.
+        Robimy projekty dopracowane w detalach — tak, żeby wyglądały jak fabryczne… tylko lepsze.
+        PPF, detailing, tuning i carbon traktujemy jak proces, nie jak “usługę z listy”.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
+    display: true,
+    title: "Jak pracujemy",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Konsultacja i plan",
+        timeframe: "Krok 01",
+        role: "Cel → zakres → efekt końcowy",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          <>Ustalamy cel projektu i priorytety: ochrona, wygląd, osiągi, detale.</>,
+          <>Dobieramy rozwiązania pod auto: pakiet, materiały, terminy i budżet.</>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            alt: "IT’S FRACTAL — konsultacja i plan",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Realizacja i kontrola jakości",
+        timeframe: "Krok 02",
+        role: "Precyzja wykonania + powtarzalny standard",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          <>Pracujemy etapowo i czytelnie: przygotowanie → montaż → wykończenie.</>,
+          <>Kontrola jakości na każdym etapie, żeby final był idealny wizualnie i technicznie.</>,
         ],
         images: [],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Specjalizacje",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "PPF / Ochrona",
+        description: <>Dobór ochrony pod styl jazdy i oczekiwany efekt.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Detailing / Wykończenie",
+        description: <>Połysk, głębia i perfekcyjne detale — bez kompromisów.</>,
+      },
+      {
+        name: "Tuning / Styling",
+        description: <>Modyfikacje premium: funkcja + wygląd + spójność projektu.</>,
+      },
+      {
+        name: "Carbon / Custom",
+        description: <>Indywidualne pakiety: projekt, produkcja i montaż.</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Technologie i standard",
     skills: [
       {
-        title: "Figma",
+        title: "PPF — precyzyjny montaż",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            Montaż z naciskiem na krawędzie, spasowanie i finalny wygląd.
+            Zależy nam, żeby wszystko wyglądało “OEM+”.
+          </>
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "PPF", icon: "shield" },
+          { name: "Detailing", icon: "sparkles" },
         ],
-        // optional: leave the array empty if you don't want to display images
         images: [
           {
             src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            alt: "IT’S FRACTAL — PPF",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "Next.js",
+        title: "Carbon — projekt i dopasowanie",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            Pakiety carbonowe robimy jak produkt: dopasowanie, jakość, powtarzalność i kontrola.
+            Od pomiaru / skanów po finalny montaż.
+          </>
         ),
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "Carbon", icon: "layers" },
+          { name: "Custom", icon: "wand" },
         ],
-        // optional: leave the array empty if you don't want to display images
         images: [
           {
             src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
+            alt: "IT’S FRACTAL — carbon",
             width: 16,
             height: 9,
           },
@@ -234,68 +211,64 @@ const about: About = {
 
 const blog: Blog = {
   path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  label: "Poradniki",
+  title: "Poradniki i realizacje",
+  description: "PPF • detailing • tuning • carbon — procesy, case studies i konkretne wskazówki.",
+  // Dodawaj wpisy: app/blog/posts/*.mdx
 };
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  label: "Realizacje",
+  title: "Realizacje — IT’S FRACTAL",
+  description: "Projekty IT’S FRACTAL: PPF, detailing, tuning i carbon. Zobacz proces i efekt końcowy.",
+  // Dodawaj projekty: app/work/projects/*.mdx
 };
 
 const gallery: Gallery = {
   path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
+  label: "Galeria",
+  title: "Galeria — IT’S FRACTAL",
+  description: "Zdjęcia realizacji i detali: PPF, detailing, tuning i carbon.",
   images: [
     {
       src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
+      alt: "IT’S FRACTAL — realizacja",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
+      alt: "IT’S FRACTAL — detal",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
+      alt: "IT’S FRACTAL — realizacja",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
+      alt: "IT’S FRACTAL — detal",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
+      alt: "IT’S FRACTAL — detal",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
+      alt: "IT’S FRACTAL — realizacja",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
+      alt: "IT’S FRACTAL — realizacja",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
+      alt: "IT’S FRACTAL — detal",
       orientation: "vertical",
     },
   ],
