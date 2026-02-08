@@ -4,10 +4,11 @@ import { Projects } from "@/components/work/Projects";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: work.title,
-    description: work.description,
+    title: "Realizacje — IT’S FRACTAL",
+    description:
+      "Realizacje IT’S FRACTAL: PPF, detailing, tuning i carbon. Zobacz projekty, proces i finalny efekt.",
     baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent(work.title)}`,
+    image: `/api/og/generate?title=${encodeURIComponent("IT’S FRACTAL — Realizacje")}`,
     path: work.path,
   });
 }
@@ -19,17 +20,17 @@ export default function Work() {
         as="webPage"
         baseURL={baseURL}
         path={work.path}
-        title={work.title}
-        description={work.description}
-        image={`/api/og/generate?title=${encodeURIComponent(work.title)}`}
+        title="Realizacje — IT’S FRACTAL"
+        description="Realizacje IT’S FRACTAL: PPF, detailing, tuning i carbon. Zobacz projekty, proces i finalny efekt."
+        image={`/api/og/generate?title=${encodeURIComponent("IT’S FRACTAL — Realizacje")}`}
         author={{
-          name: person.name,
+          name: "IT’S FRACTAL",
           url: `${baseURL}${about.path}`,
           image: `${baseURL}${person.avatar}`,
         }}
       />
       <Heading marginBottom="l" variant="heading-strong-xl" align="center">
-        {work.title}
+        Realizacje
       </Heading>
       <Projects />
     </Column>
