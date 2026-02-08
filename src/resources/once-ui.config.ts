@@ -195,11 +195,11 @@ const schema: SchemaConfig = {
 };
 
 // social links
-const sameAs: SameAsConfig = {
+const sameAs = {
   instagram: "https://www.instagram.com/its.fractal",
   tiktok: "https://www.tiktok.com/",
   youtube: "https://www.youtube.com/",
-};
+} as unknown as SameAsConfig;
 
 // social sharing configuration for blog posts
 const socialSharing: SocialSharingConfig = {
