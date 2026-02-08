@@ -1,78 +1,82 @@
 ---
-title: "Create,edit and delete projects"
-summary: "Create, edit and delete projects in the work section of your Magic Portfolio."
-publishedAt: "2025-04-19"
-tag: "Magic Portfolio"
+title: "Realizacje IT’S FRACTAL — jak dodajemy projekty i co powinno się w nich znaleźć"
+summary: "Realizacja to nie tylko zdjęcia. To opis procesu i efektu, który pokazuje jakość i ułatwia klientom decyzję."
+publishedAt: "2026-02-08"
+tag: "Behind the scenes"
 ---
 
 ## Manage projects
 
-You can create, edit and delete projects by adding, modifying or removing `*.mdx` files in the `src/app/work/projects` directory.
+Nasze realizacje (Work) to po prostu osobne pliki projektu.  
+Każdy projekt ma swój tytuł, opis, zdjęcia i czasami team.
+
+To pozwala nam trzymać porządek i pokazywać projekty premium bez chaosu.
 
 ## Frontmatter
 
-The frontmatter is used to set the project's metadata: title, description, image, and tags. It's used in the project's page and in meta- and open graph tags.
+To jest “wizytówka” realizacji — wpływa na to, jak projekt wygląda na liście, w Google i w podglądzie linku.
 
 <CodeBlock
-    marginBottom="16"
-    codes={[
-      {
-        code:
+  marginBottom="16"
+  codes={[
+    {
+      code:
 `---
-title: "Developing a design system for indie creators"
-publishedAt: "2025-03-17"
-summary: "Once UI is a design system that empowers indie creators, small teams, and startups to build web applications."
+title: "Mercedes V-Class — pakiet carbon + montaż"
+publishedAt: "2026-02-08"
+summary: "Projekt pod dokładki: skan 3D, dopasowanie, wykończenie i montaż w standardzie premium."
 images:
-  - "/images/projects/project-01/cover-02.jpg"
-  - "/images/projects/project-01/image-03.jpg"
+  - "/images/projects/mercedes-v/cover-01.jpg"
+  - "/images/projects/mercedes-v/cover-02.jpg"
 team:
-  - name: "Lorant One"
-    role: "Software Engineer"
+  - name: "IT’S FRACTAL"
+    role: "Premium Automotive Studio"
     avatar: "/images/avatar.jpg"
-    linkedIn: "https://www.linkedin.com/company/once-ui/"
-link: "https://once-ui.com/"
+    linkedIn: "https://www.instagram.com/its.fractal"
+link: "https://itsfractal.com/"
 ---`,
-        language: "tsx",
-        label: "src/app/work/projects/project-1.mdx"
-      }
-    ]}
+      language: "mdx",
+      label: "src/app/work/projects/mercedes-v-class-carbon-kit.mdx"
+    }
+  ]}
 />
 
-## MDX syntax
+## Co warto wrzucać do realizacji
 
-You can use MDX to write the content of your projects. It helps you write rich and dynamic content with minimal code. Some MDX elements will be automatically transformed to Once UI components to integrate better in the design and add additional functionality.
+- zdjęcia “przed / po” (albo chociaż before)
+- 3–6 najlepszych ujęć detalu
+- co było celem (ochrona / wygląd / projekt showcar)
+- co było zrobione (krótko, konkretnie)
+- jeśli to carbon: dopasowanie, wykończenie, montaż
+
+## MDX (czyli treść realizacji)
+
+W środku realizacji opisujemy proces normalnie, po ludzku.
+Możemy dodawać tabelki (np. zakres pakietu), sekcje FAQ, listy etapów — wszystko wygląda spójnie.
 
 ## Custom components
 
-You can use custom components in MDX files, but you need to import them first in the `src/components/mdx.tsx` file.
+Jeśli chcemy użyć dodatkowych komponentów w realizacjach, dodajemy je do mapowania MDX.
 
 <CodeBlock
-    marginBottom="16"
-    highlight="11-12"
-    codes={[
-      {
-        code:
+  marginBottom="16"
+  codes={[
+    {
+      code:
 `const components = {
-    p: createParagraph as any,
-    h1: createHeading(1) as any,
-    h2: createHeading(2) as any,
-    h3: createHeading(3) as any,
-    h4: createHeading(4) as any,
-    h5: createHeading(5) as any,
-    h6: createHeading(6) as any,
-    img: createImage as any,
-    a: CustomLink as any,
-    Table,
-    CodeBlock,
+  p: createParagraph as any,
+  h1: createHeading("h1") as any,
+  h2: createHeading("h2") as any,
+  img: createImage as any,
+  a: CustomLink as any,
+  Table,
+  CodeBlock,
+  Feedback,
 };`,
-        language: "tsx",
-        label: "src/components/mdx.tsx"
-      }
-    ]}
+      language: "tsx",
+      label: "src/product/mdx.tsx"
+    }
+  ]}
 />
 
-As you can see, the `Table` and `CodeBlock` components are already imported and available for use. You can add more by simply importing them to this file and passing them to the `components` object.
-
-## Hot reload
-
-Hot reload of MDX files is currently not supported, but we're working on it.
+Najważniejsze: realizacje mają wyglądać premium i pokazywać jakość — to jest nasza wizytówka.
