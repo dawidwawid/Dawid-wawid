@@ -32,7 +32,7 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
     setEmail(value);
 
     if (!validateEmail(value)) {
-      setError("Please enter a valid email address.");
+      setError("Podaj poprawny adres e-mail.");
     } else {
       setError("");
     }
@@ -43,7 +43,7 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
   const handleBlur = () => {
     setTouched(true);
     if (!validateEmail(email)) {
-      setError("Please enter a valid email address.");
+      setError("Podaj poprawny adres e-mail.");
     }
   };
 
@@ -104,6 +104,7 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
           color: mailchimp.effects.lines.color,
         }}
       />
+
       <Column maxWidth="xs" horizontal="center">
         <Heading marginBottom="s" variant="display-strong-xs">
           {newsletter.title}
@@ -112,6 +113,7 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
           {newsletter.description}
         </Text>
       </Column>
+
       <form
         style={{
           width: "100%",
@@ -135,7 +137,7 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
             id="mce-EMAIL"
             name="EMAIL"
             type="email"
-            placeholder="Email"
+            placeholder="Adres e-mail"
             required
             onChange={(e) => {
               if (error) {
@@ -147,6 +149,7 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
             onBlur={handleBlur}
             errorMessage={error}
           />
+
           <div style={{ display: "none" }}>
             <input
               type="checkbox"
@@ -157,10 +160,12 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
               checked
             />
           </div>
+
           <div id="mce-responses" className="clearfalse">
             <div className="response" id="mce-error-response" style={{ display: "none" }}></div>
             <div className="response" id="mce-success-response" style={{ display: "none" }}></div>
           </div>
+
           <div aria-hidden="true" style={{ position: "absolute", left: "-5000px" }}>
             <input
               type="text"
@@ -170,10 +175,11 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
               value=""
             />
           </div>
+
           <div className="clear">
             <Row height="48" vertical="center">
-              <Button id="mc-embedded-subscribe" value="Subscribe" size="m" fillWidth>
-                Subscribe
+              <Button id="mc-embedded-subscribe" value="Zapisz się" size="m" fillWidth>
+                Zapisz się
               </Button>
             </Row>
           </div>
