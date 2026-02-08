@@ -1,117 +1,87 @@
 ---
-title: "Updating the content of Magic Portfolio"
-summary: "Personalize the portfolio template with your own content."
-publishedAt: "2025-04-18"
-tag: "Magic Portfolio"
+title: "Jak przygotować auto do PPF i detailingu — prosto, bez spiny"
+summary: "Co zrobić (i czego nie robić) zanim przyjedziesz do studia. Dzięki temu efekt będzie lepszy, a proces szybszy."
+publishedAt: "2026-02-08"
+tag: "Detailing"
 ---
 
-## Avatar
+## 1) Mycie przed wizytą
 
-Replace the `public/images/avatar.jpg` file with your own avatar image. It is used on the `/about` page as well as on the dynamically generated `open-graph` images.
+Jeśli możesz — przyjedź z autem umytym, ale bez “agresywnej chemii” i bez wosków na ostatnią chwilę.
 
-## Favicon
+- bez wosków “na błysk” dzień przed
+- bez dressingów na plastiki
+- najlepiej zwykłe mycie + osuszenie
 
-Replace the `src/app/favicon.ico` file with your own favicon.
+<Feedback
+  icon
+  variant="success"
+  title="Pro tip"
+  description="Jeśli auto jest świeżo po myjni automatycznej i całe w mikrorysach — da się to ogarnąć, ale zajmie więcej czasu."
+  marginBottom="24"
+/>
 
-## Content
+## 2) Co zabrać / przygotować
 
-Replace the content in the `resources/content.js` file with your own content. You can use custom components in most cases, since the props are usually declared as `ReactNode` instead of `string`, but it's important that you need to import them in the file.
+Ważne rzeczy, które przyspieszają robotę:
 
-<CodeBlock
-    marginBottom="16"
-    highlight="1-2"
-    codes={[
-  {
-    code:
-`import { InlineCode } from "@once-ui-system/core";
-import Link from "next/link";
+- kluczyki (drugi komplet jeśli jest)
+- informacja o alarmie / trybie serwisowym
+- jeśli auto ma nietypowe mody — daj znać wcześniej
+- jeśli masz nowe elementy do montażu (carbon), przygotuj je i opisz
 
-const person = {
-  ...
-};`,
-    language: "tsx",
-    label: "src/app/resources/content.js"
-  }
-]} />
+## 3) Czego NIE robić przed PPF
 
-The imports above would let us use `InlineCode` and `Link` components in the content file.
+Nie rób tego dzień wcześniej:
 
-### Personal details
+- quick detailer / “śliski spray”
+- wosk / sealant / ceramika (jeśli nie ustaliliśmy)
+- domowe polerowanie “bo coś widać”
+- naklejki na świeżo (zostaje klej)
 
-Your personal details are used across the whole app to render personalized headings, labels and images. Languages are displayed on the `/about` page, and location and time in the header.
+## 4) Jak wygląda proces u nas
 
-<CodeBlock
-    marginBottom="16"
-    highlight="2-3,7-10"
-    codes={[
-  {
-    code:
-`const person = {
-    firstName: "Selene",
-    lastName: "Yu",
-    get name() {
-      return "...";
-    },
-    role: "Design Engineer",
-    avatar: "/images/avatar.jpg",
-    location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
-};`,
-    language: "tsx",
-    label: "src/app/resources/content.js"
-  }
-]} />
-
-### Social links
-
-Social links are rendered on the `/about` page and in the footer based on the array configured in the `social` object. You can set custom icons to each, but don't forget to import them in `src/once-ui/icons.ts`. Read the Once UI documentation](https://once-ui.com/docs/icons) for more information.
+Robimy wszystko etapowo — najpierw ocena, potem przygotowanie, dopiero montaż.
 
 <CodeBlock
-    marginBottom="16"
-    codes={[
-  {
-    code:
-`const social = [
+  marginBottom="16"
+  codes={[
     {
-      name: "GitHub",
-      icon: "github",
-      link: "https://github.com/once-ui-system/nextjs-starter",
-    },
-    {
-      name: "Email",
-      icon: "email",
-      link: "mailto:lorant@once-ui.com",
-    },
-];`,
-    language: "tsx",
-    label: "src/app/resources/content.js"
-  }
-]} />
+      code:
+`Proces IT’S FRACTAL:
+1) Ocena lakieru i plan
+2) Przygotowanie powierzchni
+3) Korekta (jeśli trzeba)
+4) Montaż PPF / zabezpieczenie
+5) Wykończenie + kontrola jakości`,
+      language: "text",
+      label: "IT’S FRACTAL"
+    }
+  ]}
+/>
 
-### Pages
+## 5) Najprostsza wiadomość, którą możesz nam wysłać
 
-Each page have it's own object that manages the personalized content, such as headings, subheadings, images and dynamic data.
+Najlepiej działa konkret. Wystarczy coś takiego:
 
 <CodeBlock
-    marginBottom="16"
-    codes={[
-  {
-    code:
-`const home = {
-    label: "Home",
-    title: "Selene Yu's Portfolio",
-    description: "Portfolio website showcasing my work as a Design Engineer",
-    headline: <>Design engineer and builder</>,
-    subline: (
-      <>
-        I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-        <br /> user experiences. After hours, I build my own projects.
-      </>
-    ),
-};`,
-    language: "tsx",
-    label: "src/app/resources/content.js"
-  }
-]} />
+  marginBottom="16"
+  codes={[
+    {
+      code:
+`Auto: (model/rocznik)
+Cel: (ochrona / wygląd / sprzedaż / spokój)
+Zasięg: (pakiet przód / full / inne)
+Uwagi: (np. autostrada, czarny lakier, nowe felgi, carbon w planie)`,
+      language: "text",
+      label: "Wiadomość do IT’S FRACTAL"
+    }
+  ]}
+/>
 
-The `label` property is used in the header navigation. The `title` property is used for the page title and the `description` property is used for the page description. They are also used in meta- and open graph tags.
+## Podsumowanie
+
+Nie musisz robić “perfekcyjnego przygotowania”.  
+Wystarczy, że nie utrudnisz procesu — resztę ogarniemy my.
+
+Jeśli chcesz, dobierzemy pakiet PPF pod Twoje auto i styl jazdy.
