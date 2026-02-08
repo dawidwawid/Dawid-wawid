@@ -1,56 +1,70 @@
 ---
-title: "Enable or disable pages for your portfolio"
-summary: "Magic Portfolio's RouteGuard component takes care of conditionally rendering pages based on your settings."
+title: "Jak czytać naszą stronę — Realizacje, Poradniki i Galeria"
+summary: "Prosto: co znajdziesz w każdej sekcji IT’S FRACTAL i jak szybko trafić do tego, co Cię interesuje."
 image: "/images/gallery/horizontal-2.jpg"
-publishedAt: "2025-04-22"
-tag: "Magic Portfolio"
+publishedAt: "2026-02-08"
+tag: "Info"
 ---
 
-## Enable or disable pages
+Na stronie IT’S FRACTAL nie chcemy lania wody. Masz szybko znaleźć:
 
-Magic Portfolio's `RouteGuard` component takes care of conditionally rendering pages based on the `routes` object in the `resources/config.js` file.
+- **Realizacje** (projekty i efekty)
+- **Poradniki** (jak dbać o auto / PPF / carbon)
+- **Galeria** (zdjęcia, vibe, detale)
+
+## Realizacje (Work)
+
+Tu pokazujemy projekty: PPF, detailing, carbon, modyfikacje.  
+Jeśli chcesz zobaczyć “jak to wygląda u nas” — to jest najlepsze miejsce.
+
+## Poradniki (Blog)
+
+Tu wrzucamy konkretne tipy:
+- jak myć auto z PPF
+- co niszczy lakier
+- co ma sens w carbonie
+- jak dobierać pakiety
+
+## Galeria (Gallery)
+
+Galeria to “detale i klimat” — dużo ujęć, które pokazują jakość wykończenia.
+
+## Jak najszybciej trafić w temat
+
+Jeśli jesteś “zdecydowany”, to prosta droga:
 
 <CodeBlock
-    marginBottom="16"
-    highlight="6"
-    codes={[
-  {
-    code:
-`const routes = {
-    '/':        true,
-    '/about':   true,
-    '/work':    true,
-    '/blog':    true,
-    '/gallery': false,
-};`,
-    language: "tsx",
-    label: "src/app/resources/config.js"
-  }
-]} />
+  marginBottom="16"
+  codes={[
+    {
+      code:
+`Szybki wybór:
+- Chcesz zobaczyć efekty? -> Realizacje
+- Chcesz wiedzieć co wybrać? -> Poradniki
+- Chcesz vibe + detale? -> Galeria`,
+      language: "text",
+      label: "IT’S FRACTAL"
+    }
+  ]}
+/>
 
-The code above will ensure that the `/gallery` page is not accessible and is not displayed in the navigation.
+## Dla ciekawych (mały backstage)
 
-## Add new pages
-
-When creating a new page, it needs to be added to the `routes` object in the `resources/config.js` file.
+My kontrolujemy, które sekcje są aktywne — dzięki temu strona jest czysta i nie ma bałaganu.
 
 <CodeBlock
-    marginBottom="16"
-    highlight="6"
-    codes={[
-  {
-    code:
-`const routes = {
-    '/':        true,
-    '/about':   true,
-    '/work':    true,
-    '/blog':    true,
-    '/gallery': false,
-    '/music': true,
-};`,
-    language: "tsx",
-    label: "src/app/resources/config.js"
-  }
-]} />
-
-The code above will ensure that the `/music` page is accessible. Users will be able to navigate to it after adding it to the navigation menu in the `components/Header.tsx` file.
+  marginBottom="16"
+  codes={[
+    {
+      code:
+`Sekcje strony (przykład):
+'/'        -> start
+'/about'   -> o nas
+'/work'    -> realizacje
+'/blog'    -> poradniki
+'/gallery' -> galeria`,
+      language: "text",
+      label: "Struktura"
+    }
+  ]}
+/>
