@@ -1,108 +1,52 @@
 ---
-title: "Set up Mailchimp and collect emails"
-summary: "Set up the Mailchimp newsletter block for your Magic Portfolio."
-publishedAt: "2025-04-16"
-tag: "Magic Portfolio"
+title: "Dołącz do listy — terminy, dropy carbon i krótkie tipy"
+summary: "Zostaw maila, jeśli chcesz pierwszeństwo do terminów, info o nowych pakietach carbonowych i konkretne porady (bez spamu)."
+publishedAt: "2026-02-08"
+tag: "Newsletter"
 ---
 
-## Mailchimp account
+Nie wysyłamy śmieci.  
+Ta lista jest dla osób, które serio jarają się autem i chcą robić to porządnie.
 
-Sign up for a [Mailchimp account](https://mailchimp.com) and create a new list if you don't have one.
+## Co dostajesz
 
-## Embed form
+- info o wolnych terminach (PPF / detailing / montaż)
+- “dropy” pakietów carbonowych (nowe modele, nowe elementy)
+- proste tipy: jak dbać o PPF, mycie, co niszczy lakier itd.
+- czasem kulisy projektów IT’S FRACTAL
 
-Create a new [embed form](https://mailchimp.com/help/add-a-signup-form-to-your-website/) and copy the form URL to your Magic Portfolio config.
+<Feedback
+  icon
+  variant="success"
+  title="Zero spamu"
+  description="Wysyłamy tylko wtedy, kiedy jest coś konkretnego. W każdej chwili możesz się wypisać."
+  marginBottom="24"
+/>
+
+## Jak to u nas działa (prosto)
 
 <CodeBlock
-    highlight="2"
-    codes={[
-  {
-    code:
-`const mailchimp = {
-    action: 'https://url/subscribe/post?parameters',
-    effects: {
-      ...
+  marginBottom="16"
+  codes={[
+    {
+      code:
+`Newsletter IT’S FRACTAL:
+1) Zapisujesz maila
+2) Dostajesz potwierdzenie
+3) Wysyłamy tylko konkret: terminy / dropy / tipy`,
+      language: "text",
+      label: "IT’S FRACTAL"
     }
-};`, 
-    language: "tsx",
-    label: "src/app/resources/config.js"
-  }
-]} />
+  ]}
+/>
 
-## Newsletter content
+## Chcesz konkret pod swoje auto?
 
-You can modify the headline and description in the `content.js` file.
+Jeśli zapisujesz się i chcesz od razu, żebyśmy coś podpowiedzieli — odpowiedz na pierwszego maila:
 
-<CodeBlock
-    highlight="2"
-    codes={[
-  {
-    code:
-`const newsletter = {
-    display: true,
-    title: <>Subscribe to {person.firstName}'s Newsletter</>,
-    description: (
-      <>
-        I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.
-      </>
-    ),
-};`, 
-    language: "tsx",
-    label: "src/app/resources/content.js"
-  }
-]} />
+- model + rocznik
+- cel (ochrona / wygląd / projekt showcar)
+- zakres (PPF / detailing / carbon)
+- 2–3 zdjęcia auta
 
-## Background effect
-
-There's a pre-configured background in `Mailchimp.tsx` that you can modify in the `mailchimp` object. Set graphic elements such as gradient, dots, lines, and grid and configure their appearance for the newsletter block.
-
-<CodeBlock
-    codeHeight={24}
-    marginBottom="16"
-    codes={[
-  {
-    code:
-`const mailchimp = {
-    action: 'https://url/subscribe/post?parameters',
-    effects: {
-      mask: {
-        cursor: false,
-        x: 50,
-        y: 0,
-        radius: 100
-      },
-      gradient: {
-        display: true,
-        x: 50,
-        y: -25,
-        width: 100,
-        height: 100,
-        tilt: 0,
-        colorStart: 'accent-background-strong',
-        colorEnd: 'static-transparent',
-        opacity: 50
-      },
-      dots: {
-        display: true,
-        size: 2,
-        color: 'brand-on-background-weak',
-        opacity: 20
-      },
-      lines: {
-        display: false,
-        color: 'neutral-alpha-weak',
-        opacity: 100
-      },
-      grid: {
-        display: false,
-        color: 'neutral-alpha-weak',
-        opacity: 100,
-        width: 'var(--static-space-32)',
-        height: 'var(--static-space-32)'
-      }
-  }
-}`, 
-    language: "tsx",
-    label: "src/app/resources/config.js"
-  }
-]} />
+I jedziemy dalej.
