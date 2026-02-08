@@ -14,15 +14,16 @@ import {
   SpacingToken,
 } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers } from "@/components";
-import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
+import { baseURL, effects, fonts, style, dataStyle } from "@/resources";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: home.title,
-    description: home.description,
+    title: "IT’S FRACTAL — Premium Automotive Studio",
+    description:
+      "PPF • Detailing • Tuning • Carbon • Indywidualne projekty. Premium modyfikacje i ochrona aut — precyzja, jakość, efekt.",
     baseURL: baseURL,
-    path: home.path,
-    image: home.image,
+    path: "/",
+    image: `/api/og/generate?title=${encodeURIComponent("IT’S FRACTAL")}`,
   });
 }
 
@@ -35,7 +36,7 @@ export default async function RootLayout({
     <Flex
       suppressHydrationWarning
       as="html"
-      lang="en"
+      lang="pl"
       fillWidth
       className={classNames(
         fonts.heading.variable,
