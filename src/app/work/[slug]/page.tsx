@@ -4,15 +4,12 @@ import {
   Meta,
   Schema,
   AvatarGroup,
-  Button,
   Column,
-  Flex,
   Heading,
   Media,
   Text,
   SmartLink,
   Row,
-  Avatar,
   Line,
 } from "@once-ui-system/core";
 import { baseURL, about, person, work } from "@/resources";
@@ -39,7 +36,7 @@ export async function generateMetadata({
     : routeParams.slug || "";
 
   const posts = getPosts(["src", "app", "work", "projects"]);
-  let post = posts.find((post) => post.slug === slugPath);
+  const post = posts.find((post) => post.slug === slugPath);
 
   if (!post) return {};
 
@@ -62,7 +59,7 @@ export default async function Project({
     ? routeParams.slug.join("/")
     : routeParams.slug || "";
 
-  let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === slugPath);
+  const post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === slugPath);
 
   if (!post) {
     notFound();
@@ -87,23 +84,28 @@ export default async function Project({
           post.metadata.image || `/api/og/generate?title=${encodeURIComponent(post.metadata.title)}`
         }
         author={{
-          name: person.name,
+          name: "IT’S FRACTAL",
           url: `${baseURL}${about.path}`,
           image: `${baseURL}${person.avatar}`,
         }}
       />
+
       <Column maxWidth="s" gap="16" horizontal="center" align="center">
         <SmartLink href="/work">
-          <Text variant="label-strong-m">Projects</Text>
+          <Text variant="label-strong-m">Realizacje</Text>
         </SmartLink>
+
         <Text variant="body-default-xs" onBackground="neutral-weak" marginBottom="12">
           {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
         </Text>
+
         <Heading variant="display-strong-m">{post.metadata.title}</Heading>
       </Column>
+
       <Row marginBottom="32" horizontal="center">
         <Row gap="16" vertical="center">
           {post.metadata.team && <AvatarGroup reverse avatars={avatars} size="s" />}
+
           <Text variant="label-default-m" onBackground="brand-weak">
             {post.metadata.team?.map((member, idx) => (
               <span key={idx}>
@@ -118,19 +120,23 @@ export default async function Project({
           </Text>
         </Row>
       </Row>
+
       {post.metadata.images.length > 0 && (
         <Media priority aspectRatio="16 / 9" radius="m" alt="image" src={post.metadata.images[0]} />
       )}
+
       <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
         <CustomMDX source={post.content} />
       </Column>
+
       <Column fillWidth gap="40" horizontal="center" marginTop="40">
         <Line maxWidth="40" />
         <Heading as="h2" variant="heading-strong-xl" marginBottom="24">
-          Related projects
+          Podobne realizacje
         </Heading>
         <Projects exclude={[post.slug]} range={[2]} />
       </Column>
+
       <ScrollToHash />
     </Column>
   );
