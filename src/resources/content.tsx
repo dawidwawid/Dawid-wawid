@@ -2,20 +2,20 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "IT’S",
-  lastName: "FRACTAL",
-  name: "IT’S FRACTAL",
-  role: "Premium Automotive Studio",
+  firstName: "Dawid",
+  lastName: "Wierzbicki",
+  name: "DEWORA Digital",
+  role: "Web Development • Digital Marketing • AI Solutions",
   avatar: "/images/avatar.jpg",
-  email: "kontakt@itsfractal.pl",
-  location: "Europe/Warsaw", // IANA time zone identifier (np. 'Europe/Warsaw')
+  email: "home@dewora.pl",
+  location: "Europe/Warsaw",
   languages: ["Polski", "English"],
 };
 
 const newsletter: Newsletter = {
   display: true,
-  title: <>Dołącz do newslettera IT’S FRACTAL</>,
-  description: <>Nowe realizacje, premiery projektów i dostępne terminy — bez spamu.</>,
+  title: <>Dołącz do newslettera DEWORA Digital</>,
+  description: <>Otrzymuj praktyczne wskazówki dotyczące stron internetowych, marketingu, SEO, AI oraz rozwoju biznesu online.</>,
 };
 
 const social: Social = [
@@ -23,7 +23,7 @@ const social: Social = [
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/dewora_pl",
     essential: true,
   },
   {
@@ -47,41 +47,41 @@ const social: Social = [
 ];
 
 const home: Home = {
-  path: "/",
-  image: "/images/og/home.jpg",
-  label: "Home",
-  title: "IT’S FRACTAL — Premium Automotive Studio",
-  description:
-    "PPF • Detailing • Tuning • Carbon • Indywidualne projekty. Premium modyfikacje i ochrona aut — precyzja, jakość, efekt.",
-  headline: <>IT’S FRACTAL</>,
-  featured: {
-    display: true,
-    title: (
-      <Row gap="12" vertical="center">
-        <strong className="ml-4">IT’S FRACTAL</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
-        <Text marginRight="4" onBackground="brand-medium">
-          Pakiety Carbon — projekt + produkcja + montaż
-        </Text>
-      </Row>
-    ),
+path: "/",
+image: "/images/og/home.jpg",
+label: "Home",
+title: "DEWORA Digital — Strony Internetowe, Marketing i AI",
+description:
+  "Projektujemy nowoczesne strony internetowe, sklepy online, aplikacje i strategie marketingowe, które pomagają firmom rozwijać się w internecie.",
+headline: <>DEWORA Digital</>,
+featured: {
+  display: true,
+  title: (
+    <Row gap="12" vertical="center">
+      <strong className="ml-4">DEWORA Digital</strong>{" "}
+      <Line background="brand-alpha-strong" vert height="20" />
+      <Text marginRight="4" onBackground="brand-medium">
+        Strony WWW • Marketing • SEO • Social Media • AI
+      </Text>
+    </Row>
+  ),
     href: "/work",
   },
-  subline: (
-    <>
-      Premium automotive studio — PPF, detailing, tuning i carbon.
-      <br />
-      Projekty dopasowane 1:1 do auta, procesu i efektu, który ma robić wrażenie.
-    </>
-  ),
+subline: (
+  <>
+    Tworzymy nowoczesne strony internetowe, sklepy online i rozwiązania cyfrowe.
+    <br />
+    Pomagamy firmom zdobywać klientów, budować markę i rozwijać biznes w internecie.
+  </>
+),
 };
 
 const about: About = {
   path: "/about",
   label: "O nas",
-  title: "O nas — IT’S FRACTAL",
+  title: "O nas — DEWORA Digital",
   description:
-    "IT’S FRACTAL — premium automotive studio: PPF, detailing, tuning i carbon. Precyzja, dopasowanie i efekt końcowy.",
+    "DEWORA Digital — strony internetowe, sklepy online, marketing, social media, branding, SEO i rozwiązania AI dla firm.",
   tableOfContent: {
     display: true,
     subItems: false,
@@ -98,9 +98,9 @@ const about: About = {
     title: "Kim jesteśmy",
     description: (
       <>
-        IT’S FRACTAL to studio premium, w którym łączymy ochronę, estetykę i modyfikacje.
-        Robimy projekty dopracowane w detalach — tak, żeby wyglądały jak fabryczne… tylko lepsze.
-        PPF, detailing, tuning i carbon traktujemy jak proces, nie jak “usługę z listy”.
+        DEWORA Digital to nowoczesne studio digital, które pomaga firmom budować profesjonalny wizerunek online.
+        Tworzymy strony internetowe, sklepy, aplikacje, branding, social media i strategie marketingowe.
+        Łączymy design, technologię i AI, aby tworzyć rozwiązania, które realnie wspierają sprzedaż i rozwój biznesu.
       </>
     ),
   },
@@ -109,29 +109,29 @@ const about: About = {
     title: "Jak pracujemy",
     experiences: [
       {
-        company: "Konsultacja i plan",
+        company: "Analiza i strategia",
         timeframe: "Krok 01",
-        role: "Cel → zakres → efekt końcowy",
+        role: "Cel → projekt → plan działania",
         achievements: [
-          <>Ustalamy cel projektu i priorytety: ochrona, wygląd, osiągi, detale.</>,
-          <>Dobieramy rozwiązania pod auto: pakiet, materiały, terminy i budżet.</>,
+          <>Poznajemy firmę, ofertę, klientów i cel projektu.</>,
+          <>Dobieramy rozwiązania: stronę, sklep, branding, SEO, social media lub automatyzacje AI.</>,
         ],
         images: [
           {
             src: "/images/projects/project-01/cover-01.jpg",
-            alt: "IT’S FRACTAL — konsultacja i plan",
+            alt: "DEWORA Digital — analiza i strategia",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Realizacja i kontrola jakości",
+        company: "Projekt, wdrożenie i rozwój",
         timeframe: "Krok 02",
-        role: "Precyzja wykonania + powtarzalny standard",
+        role: "Design + technologia + marketing",
         achievements: [
-          <>Pracujemy etapowo i czytelnie: przygotowanie → montaż → wykończenie.</>,
-          <>Kontrola jakości na każdym etapie, żeby final był idealny wizualnie i technicznie.</>,
+          <>Tworzymy nowoczesny projekt, wdrażamy stronę i optymalizujemy ją pod urządzenia mobilne.</>,
+          <>Po publikacji możemy wspierać firmę w marketingu, aktualizacjach, SEO i dalszym rozwoju online.</>,
         ],
         images: [],
       },
@@ -142,20 +142,20 @@ const about: About = {
     title: "Specjalizacje",
     institutions: [
       {
-        name: "PPF / Ochrona",
-        description: <>Dobór ochrony pod styl jazdy i oczekiwany efekt.</>,
+        name: "Strony internetowe",
+        description: <>Nowoczesne, responsywne strony dla firm lokalnych i marek premium.</>,
       },
       {
-        name: "Detailing / Wykończenie",
-        description: <>Połysk, głębia i perfekcyjne detale — bez kompromisów.</>,
+        name: "E-commerce",
+        description: <>Sklepy online przygotowane do sprzedaży produktów i usług w internecie.</>,
       },
       {
-        name: "Tuning / Styling",
-        description: <>Modyfikacje premium: funkcja + wygląd + spójność projektu.</>,
+        name: "Marketing i social media",
+        description: <>Grafiki, treści, kampanie i komunikacja dopasowana do marki.</>,
       },
       {
-        name: "Carbon / Custom",
-        description: <>Indywidualne pakiety: projekt, produkcja i montaż.</>,
+        name: "AI i automatyzacje",
+        description: <>Rozwiązania usprawniające sprzedaż, obsługę klienta i codzienną pracę firmy.</>,
       },
     ],
   },
@@ -164,42 +164,42 @@ const about: About = {
     title: "Technologie i standard",
     skills: [
       {
-        title: "PPF — precyzyjny montaż",
+        title: "Strony WWW — projekt i wdrożenie",
         description: (
           <>
-            Montaż z naciskiem na krawędzie, spasowanie i finalny wygląd.
-            Zależy nam, żeby wszystko wyglądało “OEM+”.
+            Projektujemy strony, które są szybkie, estetyczne i dopasowane do celu biznesowego.
+            Dbamy o wygląd, responsywność, czytelność i mocne wezwania do działania.
           </>
         ),
         tags: [
-          { name: "PPF", icon: "shield" },
-          { name: "Detailing", icon: "sparkles" },
+          { name: "Web Design", icon: "monitor" },
+          { name: "SEO", icon: "search" },
         ],
         images: [
           {
             src: "/images/projects/project-01/cover-02.jpg",
-            alt: "IT’S FRACTAL — PPF",
+            alt: "DEWORA Digital — strony internetowe",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "Carbon — projekt i dopasowanie",
+        title: "Digital Marketing — rozwój online",
         description: (
           <>
-            Pakiety carbonowe robimy jak produkt: dopasowanie, jakość, powtarzalność i kontrola.
-            Od pomiaru / skanów po finalny montaż.
+            Pomagamy firmom budować widoczność w internecie poprzez branding, social media,
+            SEO, treści i spójną komunikację marki.
           </>
         ),
         tags: [
-          { name: "Carbon", icon: "layers" },
-          { name: "Custom", icon: "wand" },
+          { name: "Marketing", icon: "megaphone" },
+          { name: "AI", icon: "sparkles" },
         ],
         images: [
           {
             src: "/images/projects/project-01/cover-04.jpg",
-            alt: "IT’S FRACTAL — carbon",
+            alt: "DEWORA Digital — marketing i AI",
             width: 16,
             height: 9,
           },
@@ -212,24 +212,24 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Poradniki",
-  title: "Poradniki i realizacje",
-  description: "PPF • detailing • tuning • carbon — procesy, case studies i konkretne wskazówki.",
+  title: "Poradniki i inspiracje",
+  description: "Strony internetowe, marketing, SEO, social media, AI i rozwój biznesu online.",
   // Dodawaj wpisy: app/blog/posts/*.mdx
 };
 
 const work: Work = {
   path: "/work",
   label: "Realizacje",
-  title: "Realizacje — IT’S FRACTAL",
-  description: "Projekty IT’S FRACTAL: PPF, detailing, tuning i carbon. Zobacz proces i efekt końcowy.",
+  title: "Realizacje — DEWORA Digital",
+  description: "Projekty DEWORA Digital: strony internetowe, branding, sklepy online, marketing i rozwiązania cyfrowe.",
   // Dodawaj projekty: app/work/projects/*.mdx
 };
 
 const gallery: Gallery = {
   path: "/gallery",
   label: "Galeria",
-  title: "Galeria — IT’S FRACTAL",
-  description: "Zdjęcia realizacji i detali: PPF, detailing, tuning i carbon.",
+  title: "Galeria — DEWORA Digital",
+  description: "Wybrane projekty, realizacje stron internetowych, identyfikacji wizualnych i materiałów digital.",
   images: [
     {
       src: "/images/gallery/horizontal-1.jpg",
