@@ -122,9 +122,78 @@ export default function Home() {
         </Column>
       </Column>
 
-      <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[1, 1]} />
-      </RevealFx>
+   <RevealFx translateY="16" delay={0.6} fillWidth>
+  <Column fillWidth gap="24" paddingY="32">
+    <Column horizontal="center" align="center" gap="8">
+      <Heading as="h2" variant="display-strong-xs" align="center">
+        Wybierz pakiet dla swojej firmy
+      </Heading>
+      <Text variant="body-default-l" onBackground="neutral-weak" align="center">
+        Proste pakiety startowe dla firm, które chcą profesjonalnie wejść do internetu.
+      </Text>
+    </Column>
+
+    <Row fillWidth gap="16" s={{ direction: "column" }}>
+      <Column flex={1} padding="24" gap="16" border="neutral-alpha-medium" radius="l">
+        <Heading as="h3" variant="heading-strong-l">
+          START
+        </Heading>
+        <Text onBackground="neutral-weak">
+          Dla małych firm i osób rozpoczynających działalność.
+        </Text>
+        <Heading as="p" variant="display-strong-xs">
+          od 2 500 zł
+        </Heading>
+        <Text>Strona One Page</Text>
+        <Text>Responsywność</Text>
+        <Text>Formularz kontaktowy</Text>
+        <Text>Podstawowe SEO</Text>
+        <Button href="mailto:home@dewora.pl" variant="secondary">
+          Zamów wycenę
+        </Button>
+      </Column>
+
+      <Column flex={1} padding="24" gap="16" border="brand-alpha-medium" radius="l">
+        <Badge background="brand-alpha-weak">Najczęściej wybierany</Badge>
+        <Heading as="h3" variant="heading-strong-l">
+          BUSINESS
+        </Heading>
+        <Text onBackground="neutral-weak">
+          Dla firm, które potrzebują rozbudowanej strony i lepszej widoczności.
+        </Text>
+        <Heading as="p" variant="display-strong-xs">
+          od 4 500 zł
+        </Heading>
+        <Text>Strona wielostronicowa</Text>
+        <Text>Indywidualny projekt</Text>
+        <Text>Optymalizacja SEO</Text>
+        <Text>Formularze i integracje</Text>
+        <Button href="mailto:home@dewora.pl" variant="primary">
+          Zamów wycenę
+        </Button>
+      </Column>
+
+      <Column flex={1} padding="24" gap="16" border="neutral-alpha-medium" radius="l">
+        <Heading as="h3" variant="heading-strong-l">
+          PREMIUM
+        </Heading>
+        <Text onBackground="neutral-weak">
+          Dla marek, które chcą mocnej strony, strategii i dalszego rozwoju online.
+        </Text>
+        <Heading as="p" variant="display-strong-xs">
+          od 7 500 zł
+        </Heading>
+        <Text>Strategia UX/UI</Text>
+        <Text>Zaawansowane SEO</Text>
+        <Text>Landing pages</Text>
+        <Text>AI i automatyzacje</Text>
+        <Button href="mailto:home@dewora.pl" variant="secondary">
+          Umów konsultację
+        </Button>
+      </Column>
+    </Row>
+  </Column>
+</RevealFx>
 
       {routes["/blog"] && (
         <Column fillWidth gap="24" marginBottom="l">
