@@ -4,11 +4,11 @@ import { baseURL, gallery, person } from "@/resources";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: "Galeria — IT’S FRACTAL",
+    title: "Galeria — DEWORA Digital",
     description:
-      "Galeria realizacji IT’S FRACTAL: PPF, detailing, tuning i carbon. Zobacz projekty, detale i efekt końcowy.",
+      "Galeria projektów DEWORA Digital: strony internetowe, branding, identyfikacje wizualne, marketing, social media i rozwiązania cyfrowe.",
     baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent("IT’S FRACTAL — Galeria")}`,
+    image: `/api/og/generate?title=${encodeURIComponent("DEWORA Digital — Galeria")}`,
     path: gallery.path,
   });
 }
@@ -19,12 +19,12 @@ export default function Gallery() {
       <Schema
         as="webPage"
         baseURL={baseURL}
-        title="Galeria — IT’S FRACTAL"
-        description="Galeria realizacji IT’S FRACTAL: PPF, detailing, tuning i carbon. Zobacz projekty, detale i efekt końcowy."
+        title="Galeria — DEWORA Digital"
+        description="Galeria projektów DEWORA Digital: strony internetowe, branding, identyfikacje wizualne, marketing, social media i rozwiązania cyfrowe."
         path={gallery.path}
-        image={`/api/og/generate?title=${encodeURIComponent("IT’S FRACTAL — Galeria")}`}
+        image={`/api/og/generate?title=${encodeURIComponent("DEWORA Digital — Galeria")}`}
         author={{
-          name: "IT’S FRACTAL",
+          name: "DEWORA Digital",
           url: `${baseURL}${gallery.path}`,
           image: `${baseURL}${person.avatar}`,
         }}
