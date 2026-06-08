@@ -22,7 +22,7 @@ const social: Social = [
   // Uzupełnij swoje linki (to są bezpieczne placeholdery)
   {
     name: "Instagram",
-    icon: "FaInstagram",
+    icon: "Instagram",
     link: "https://www.instagram.com/dewora_pl",
     essential: true,
   },
