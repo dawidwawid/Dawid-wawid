@@ -268,7 +268,7 @@ const gallery: Gallery = {
     },
     {
       src: "/images/gallery/vertical-3.jpg",
-      alt: "IT’S FRACTAL — detal",
+      alt: "IT’ FRACTAL — detal",
       orientation: "vertical",
     },
   ],
