@@ -19,11 +19,11 @@ import React from "react";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: "O nas — IT’S FRACTAL",
+    title: "O nas — DEWORA Digital",
     description:
-      "IT’S FRACTAL to premium automotive studio: PPF, detailing, tuning i carbon. Projektujemy i realizujemy modyfikacje z naciskiem na jakość, dopasowanie i efekt.",
+      "DEWORA Digital tworzy nowoczesne strony internetowe, sklepy online, branding, marketing, SEO, social media oraz rozwiązania AI dla firm.",
     baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent("IT’S FRACTAL — O nas")}`,
+    image: `/api/og/generate?title=${encodeURIComponent("DEWORA Digital — O nas")}`,
     path: about.path,
   });
 }
@@ -57,12 +57,12 @@ export default function About() {
       <Schema
         as="webPage"
         baseURL={baseURL}
-        title="O nas — IT’S FRACTAL"
-        description="IT’S FRACTAL to premium automotive studio: PPF, detailing, tuning i carbon. Projektujemy i realizujemy modyfikacje z naciskiem na jakość, dopasowanie i efekt."
+        title="O nas — DEWORA Digital"
+        description="DEWORA Digital tworzy nowoczesne strony internetowe, sklepy online, branding, marketing, SEO, social media oraz rozwiązania AI dla firm."
         path={about.path}
-        image={`/api/og/generate?title=${encodeURIComponent("IT’S FRACTAL — O nas")}`}
+        image={`/api/og/generate?title=${encodeURIComponent("DEWORA Digital — O nas")}`}
         author={{
-          name: "IT’S FRACTAL",
+          name: "DEWORA Digital",
           url: `${baseURL}${about.path}`,
           image: `${baseURL}${person.avatar}`,
         }}
@@ -143,20 +143,20 @@ export default function About() {
                   href={about.calendar.link}
                   data-border="rounded"
                   variant="secondary"
-                  icon="chevronRight"
+                  icon="arrowRight"
                 />
               </Row>
             )}
 
             <Heading className={styles.textAlign} variant="display-strong-xl">
-              IT’S FRACTAL
+              DEWORA Digital
             </Heading>
             <Text
               className={styles.textAlign}
               variant="display-default-xs"
               onBackground="neutral-weak"
             >
-              Premium Automotive Studio — PPF • Detailing • Tuning • Carbon
+              Strony internetowe • Marketing • SEO • Social Media • AI
             </Text>
 
             {social.length > 0 && (
@@ -178,7 +178,6 @@ export default function About() {
                         <React.Fragment key={item.name}>
                           <Row s={{ hide: true }}>
                             <Button
-                              key={item.name}
                               href={item.link}
                               prefixIcon={item.icon}
                               label={item.name}
@@ -190,7 +189,6 @@ export default function About() {
                           <Row hide s={{ hide: false }}>
                             <IconButton
                               size="l"
-                              key={`${item.name}-icon`}
                               href={item.link}
                               icon={item.icon}
                               variant="secondary"
@@ -300,7 +298,7 @@ export default function About() {
               </Heading>
               <Column fillWidth gap="l">
                 {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
+                  <Column key={`${skill.title}-${index}`} fillWidth gap="4">
                     <Text id={skill.title} variant="heading-strong-l">
                       {skill.title}
                     </Text>
