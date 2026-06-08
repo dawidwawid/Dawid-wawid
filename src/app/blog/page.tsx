@@ -5,11 +5,11 @@ import { baseURL, blog, person, newsletter } from "@/resources";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: "Poradniki — IT’S FRACTAL",
+    title: "Poradniki — DEWORA Digital",
     description:
-      "Poradniki i realizacje IT’S FRACTAL: PPF, detailing, tuning i carbon. Konkretne case studies, procesy i wskazówki premium.",
+      "Strony internetowe, marketing, SEO, social media, branding, AI oraz praktyczne poradniki pomagające rozwijać biznes online.",
     baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent("IT’S FRACTAL — Poradniki")}`,
+    image: `/api/og/generate?title=${encodeURIComponent("DEWORA Digital — Poradniki")}`,
     path: blog.path,
   });
 }
@@ -20,19 +20,19 @@ export default function Blog() {
       <Schema
         as="blogPosting"
         baseURL={baseURL}
-        title="Poradniki — IT’S FRACTAL"
-        description="Poradniki i realizacje IT’S FRACTAL: PPF, detailing, tuning i carbon. Konkretne case studies, procesy i wskazówki premium."
+        title="Poradniki — DEWORA Digital"
+        description="Strony internetowe, marketing, SEO, social media, branding, AI oraz praktyczne poradniki pomagające rozwijać biznes online."
         path={blog.path}
-        image={`/api/og/generate?title=${encodeURIComponent("IT’S FRACTAL — Poradniki")}`}
+        image={`/api/og/generate?title=${encodeURIComponent("DEWORA Digital — Poradniki")}`}
         author={{
-          name: "IT’S FRACTAL",
+          name: "DEWORA Digital",
           url: `${baseURL}/blog`,
           image: `${baseURL}${person.avatar}`,
         }}
       />
 
       <Heading marginBottom="l" variant="heading-strong-xl" marginLeft="24">
-        Poradniki i realizacje
+        Poradniki i inspiracje
       </Heading>
 
       <Column fillWidth flex={1} gap="40">
@@ -42,7 +42,7 @@ export default function Blog() {
         <Mailchimp marginBottom="l" />
 
         <Heading as="h2" variant="heading-strong-xl" marginLeft="l">
-          Starsze wpisy
+          Starsze artykuły
         </Heading>
 
         <Posts range={[4]} columns="2" />
