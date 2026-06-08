@@ -87,7 +87,7 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
               `/api/og/generate?title=${encodeURIComponent(post.metadata.title)}`
             }
             author={{
-              name: "IT’S FRACTAL",
+              name: "Dawid W.",
               url: `${baseURL}${about.path}`,
               image: `${baseURL}${person.avatar}`,
             }}
