@@ -120,7 +120,7 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
             <Row gap="16" vertical="center">
               <Avatar size="s" src={person.avatar} />
               <Text variant="label-default-m" onBackground="brand-weak">
-                IT’S FRACTAL
+                Dewora Digital
               </Text>
             </Row>
           </Row>
