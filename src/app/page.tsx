@@ -18,31 +18,31 @@ import { Posts } from "@/components/blog/Posts";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: "IT’S FRACTAL — Premium Automotive Studio",
+    title: "DEWORA Digital — Strony Internetowe, Marketing i AI",
     description:
-      "PPF • Detailing • Tuning • Carbon • Indywidualne projekty. Premium modyfikacje i ochrona aut — precyzja, jakość, efekt.",
+      "Tworzymy nowoczesne strony internetowe, sklepy online, branding, SEO, social media oraz rozwiązania AI dla firm, które chcą rozwijać biznes w internecie.",
     baseURL: baseURL,
     path: "/",
-    image: `/api/og/generate?title=${encodeURIComponent("IT’S FRACTAL")}`,
+    image: `/api/og/generate?title=${encodeURIComponent("DEWORA Digital")}`,
   });
 }
 
 export default function Home() {
-  const homeTitle = "IT’S FRACTAL — Premium Automotive Studio";
+  const homeTitle = "DEWORA Digital — Strony Internetowe, Marketing i AI";
   const homeDescription =
-    "PPF • Detailing • Tuning • Carbon • Indywidualne projekty. Premium modyfikacje i ochrona aut — precyzja, jakość, efekt.";
+    "Tworzymy nowoczesne strony internetowe, sklepy online, branding, SEO, social media oraz rozwiązania AI dla firm, które chcą rozwijać biznes w internecie.";
   const homePath = "/";
-  const homeImage = `/api/og/generate?title=${encodeURIComponent("IT’S FRACTAL")}`;
+  const homeImage = `/api/og/generate?title=${encodeURIComponent("DEWORA Digital")}`;
 
   const featured = {
     display: true,
-    title: "Nowe: Pakiety Carbon — projekt + produkcja + montaż",
+    title: "Nowe: Strony WWW • Marketing • SEO • AI dla lokalnych firm",
     href: "/work",
   };
 
-  const headline = "IT’S FRACTAL";
+  const headline = "DEWORA Digital";
   const subline =
-    "Premium automotive studio — PPF, detailing, tuning i carbon. Projekty dopasowane 1:1 do auta, procesu i efektu, który ma robić wrażenie.";
+    "Tworzymy nowoczesne strony internetowe, sklepy online i rozwiązania cyfrowe, które pomagają firmom zdobywać klientów i rozwijać biznes w internecie.";
 
   return (
     <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
@@ -54,7 +54,7 @@ export default function Home() {
         description={homeDescription}
         image={homeImage}
         author={{
-          name: "IT’S FRACTAL",
+          name: "DEWORA Digital",
           url: `${baseURL}${about.path}`,
           image: `${baseURL}${person.avatar}`,
         }}
@@ -115,7 +115,7 @@ export default function Home() {
                     size="m"
                   />
                 )}
-                Poznaj IT’S FRACTAL
+                Poznaj DEWORA Digital
               </Row>
             </Button>
           </RevealFx>
@@ -134,7 +134,7 @@ export default function Home() {
           <Row fillWidth gap="24" marginTop="40" s={{ direction: "column" }}>
             <Row flex={1} paddingLeft="l" paddingTop="24">
               <Heading as="h2" variant="display-strong-xs" wrap="balance">
-                Poradniki i realizacje
+                Poradniki i inspiracje
               </Heading>
             </Row>
             <Row flex={3} paddingX="20">
