@@ -1,82 +1,93 @@
----
-title: "Realizacje IT’S FRACTAL — jak dodajemy projekty i co powinno się w nich znaleźć"
-summary: "Realizacja to nie tylko zdjęcia. To opis procesu i efektu, który pokazuje jakość i ułatwia klientom decyzję."
-publishedAt: "2026-02-08"
-tag: "Behind the scenes"
----
 
-## Manage projects
 
-Nasze realizacje (Work) to po prostu osobne pliki projektu.  
-Każdy projekt ma swój tytuł, opis, zdjęcia i czasami team.
 
-To pozwala nam trzymać porządek i pokazywać projekty premium bez chaosu.
 
-## Frontmatter
+⸻
 
-To jest “wizytówka” realizacji — wpływa na to, jak projekt wygląda na liście, w Google i w podglądzie linku.
+title: “Realizacje DEWORA Digital — jak prezentujemy projekty i budujemy zaufanie”
+summary: “Każda realizacja pokazuje nie tylko efekt końcowy, ale również proces, strategię i wartość dostarczoną klientowi.”
+publishedAt: “2026-02-08”
+tag: “Behind the scenes”
+
+Manage projects
+
+Nasze realizacje (Work) to osobne projekty prezentujące wdrożenia wykonane przez DEWORA Digital.
+
+Każdy projekt posiada własny tytuł, opis, galerię, zakres prac oraz efekty osiągnięte dla klienta.
+
+Dzięki temu możemy w przejrzysty sposób prezentować strony internetowe, sklepy online, branding, kampanie marketingowe, SEO oraz rozwiązania AI.
+
+Frontmatter
+
+Frontmatter jest wizytówką projektu.
+
+To właśnie te informacje odpowiadają za sposób wyświetlania realizacji na stronie, w wyszukiwarce Google oraz podczas udostępniania linków.
 
 <CodeBlock
-  marginBottom="16"
-  codes={[
-    {
-      code:
-`---
-title: "Mercedes V-Class — pakiet carbon + montaż"
-publishedAt: "2026-02-08"
-summary: "Projekt pod dokładki: skan 3D, dopasowanie, wykończenie i montaż w standardzie premium."
+marginBottom=“16”
+codes={[
+{
+code:
+`—
+title: “Nowoczesna strona internetowa dla lokalnej firmy usługowej”
+publishedAt: “2026-02-08”
+summary: “Kompleksowe wdrożenie strony internetowej wraz z UX, SEO, optymalizacją wydajności oraz formularzami kontaktowymi.”
 images:
-  - "/images/projects/mercedes-v/cover-01.jpg"
-  - "/images/projects/mercedes-v/cover-02.jpg"
-team:
-  - name: "IT’S FRACTAL"
-    role: "Premium Automotive Studio"
-    avatar: "/images/avatar.jpg"
-    linkedIn: "https://www.instagram.com/its.fractal"
-link: "https://itsfractal.com/"
----`,
-      language: "mdx",
-      label: "src/app/work/projects/mercedes-v-class-carbon-kit.mdx"
+
+* “/images/projects/local-business/cover-01.jpg”
+* “/images/projects/local-business/cover-02.jpg”
+    team:
+* name: “DEWORA Digital”
+    role: “Digital Agency & Creative Studio”
+    avatar: “/images/avatar.jpg”
+    linkedIn: “https://www.instagram.com/dewora_pl”
+    link: “https://dewora.pl/”
+    —`,
+    language: “mdx”,
+    label: “src/app/work/projects/local-business-website.mdx”
     }
-  ]}
-/>
+    ]}
+    />
 
-## Co warto wrzucać do realizacji
+Co warto pokazywać w realizacjach
 
-- zdjęcia “przed / po” (albo chociaż before)
-- 3–6 najlepszych ujęć detalu
-- co było celem (ochrona / wygląd / projekt showcar)
-- co było zrobione (krótko, konkretnie)
-- jeśli to carbon: dopasowanie, wykończenie, montaż
+* widok strony głównej
+* widoki mobilne i desktopowe
+* kluczowe sekcje projektu
+* opis celu biznesowego
+* zakres wykonanych prac
+* wykorzystane technologie
+* efekty wdrożenia
+* branding i identyfikację wizualną
+* SEO i optymalizację wydajności
 
-## MDX (czyli treść realizacji)
+MDX (czyli treść realizacji)
 
-W środku realizacji opisujemy proces normalnie, po ludzku.
-Możemy dodawać tabelki (np. zakres pakietu), sekcje FAQ, listy etapów — wszystko wygląda spójnie.
+W środku realizacji opisujemy projekt w prosty i zrozumiały sposób.
 
-## Custom components
+Pokazujemy:
 
-Jeśli chcemy użyć dodatkowych komponentów w realizacjach, dodajemy je do mapowania MDX.
+* jaki problem miał klient,
+* jakie rozwiązanie zostało zaprojektowane,
+* jak wyglądał proces realizacji,
+* jaki efekt końcowy udało się osiągnąć.
+
+Możemy dodawać galerie, tabele, listy etapów, FAQ oraz dodatkowe materiały wizualne.
+
+Custom components
+
+Jeżeli chcemy używać dodatkowych komponentów w realizacjach, dodajemy je do mapowania MDX.
 
 <CodeBlock
-  marginBottom="16"
-  codes={[
-    {
-      code:
-`const components = {
-  p: createParagraph as any,
-  h1: createHeading("h1") as any,
-  h2: createHeading("h2") as any,
-  img: createImage as any,
-  a: CustomLink as any,
-  Table,
-  CodeBlock,
-  Feedback,
-};`,
-      language: "tsx",
-      label: "src/product/mdx.tsx"
-    }
-  ]}
+marginBottom=“16”
+codes={[
+{
+code:
+const components = { p: createParagraph as any, h1: createHeading("h1") as any, h2: createHeading("h2") as any, img: createImage as any, a: CustomLink as any, Table, CodeBlock, Feedback, };,
+language: “tsx”,
+label: “src/product/mdx.tsx”
+}
+]}
 />
 
-Najważniejsze: realizacje mają wyglądać premium i pokazywać jakość — to jest nasza wizytówka.
+Najważniejsze: realizacje powinny budować zaufanie, prezentować proces pracy i pokazywać realną wartość dostarczoną klientowi. To właśnie one są najważniejszym elementem portfolio DEWORA Digital.
