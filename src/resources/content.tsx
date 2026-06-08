@@ -28,7 +28,7 @@ const social: Social = [
   },
   {
     name: "Email",
-
+    icon: "email",
     link: `mailto:${person.email}`,
     essential: true,
   },
