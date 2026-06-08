@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Dawid",
   lastName: "Wierzbicki",
   name: "DEWORA Digital",
-  role: "Web Development • Digital Marketing • AI Solutions",
+  role: "Web Development | Digital Marketing | AI Solutions",
   avatar: "/images/avatar.jpg",
   email: "home@dewora.pl",
   location: "Europe/Warsaw",
@@ -172,8 +172,8 @@ const about: About = {
           </>
         ),
         tags: [
-          { name: "Web Design", icon: "monitor" },
-          { name: "SEO", icon: "search" },
+          { name: "Web Design" },
+          { name: "SEO" },
         ],
         images: [
           {
@@ -193,8 +193,8 @@ const about: About = {
           </>
         ),
         tags: [
-          { name: "Marketing", icon: "megaphone" },
-          { name: "AI", icon: "sparkles" },
+          { name: "Marketing" },
+          { name: "AI" },
         ],
         images: [
           {
