@@ -4,10 +4,10 @@
 
 ⸻
 
-title: “Realizacje DEWORA Digital — jak prezentujemy projekty i budujemy zaufanie”
-summary: “Każda realizacja pokazuje nie tylko efekt końcowy, ale również proces, strategię i wartość dostarczoną klientowi.”
-publishedAt: “2026-02-08”
-tag: “Behind the scenes”
+title: "Realizacje DEWORA Digital — jak prezentujemy projekty i budujemy zaufanie"
+summary: "Każda realizacja pokazuje nie tylko efekt końcowy, ale również proces, strategię i wartość dostarczoną klientowi."
+publishedAt: "2026-02-08"
+tag: "Behind the scenes"
 
 Manage projects
 
@@ -24,27 +24,27 @@ Frontmatter jest wizytówką projektu.
 To właśnie te informacje odpowiadają za sposób wyświetlania realizacji na stronie, w wyszukiwarce Google oraz podczas udostępniania linków.
 
 <CodeBlock
-marginBottom=“16”
+marginBottom="16"
 codes={[
 {
 code:
 `—
-title: “Nowoczesna strona internetowa dla lokalnej firmy usługowej”
-publishedAt: “2026-02-08”
-summary: “Kompleksowe wdrożenie strony internetowej wraz z UX, SEO, optymalizacją wydajności oraz formularzami kontaktowymi.”
+title: "Nowoczesna strona internetowa dla lokalnej firmy usługowej"
+publishedAt: "2026-02-08"
+summary: "Kompleksowe wdrożenie strony internetowej wraz z UX, SEO, optymalizacją wydajności oraz formularzami kontaktowymi."
 images:
 
-* “/images/projects/local-business/cover-01.jpg”
-* “/images/projects/local-business/cover-02.jpg”
+* "/images/projects/local-business/cover-01.jpg"
+* "/images/projects/local-business/cover-02.jpg"
     team:
-* name: “DEWORA Digital”
-    role: “Digital Agency & Creative Studio”
-    avatar: “/images/avatar.jpg”
-    linkedIn: “https://www.instagram.com/dewora_pl”
-    link: “https://dewora.pl/”
+* name: "DEWORA Digital"
+    role: "Digital Agency & Creative Studio"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.instagram.com/dewora_pl"
+    link: "https://dewora.pl/"
     —`,
-    language: “mdx”,
-    label: “src/app/work/projects/local-business-website.mdx”
+    language: "mdx",
+    label: "src/app/work/projects/local-business-website.mdx"
     }
     ]}
     />
@@ -79,13 +79,13 @@ Custom components
 Jeżeli chcemy używać dodatkowych komponentów w realizacjach, dodajemy je do mapowania MDX.
 
 <CodeBlock
-marginBottom=“16”
+marginBottom="16"
 codes={[
 {
 code:
 const components = { p: createParagraph as any, h1: createHeading("h1") as any, h2: createHeading("h2") as any, img: createImage as any, a: CustomLink as any, Table, CodeBlock, Feedback, };,
-language: “tsx”,
-label: “src/product/mdx.tsx”
+language: "tsx",
+label: "src/product/mdx.tsx"
 }
 ]}
 />
