@@ -73,7 +73,7 @@ export const Header = () => {
         }}
       >
         <Row paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
-          {display.location && <Row s={{ hide: true }}>IT’S FRACTAL</Row>}
+          {display.location && <Row s={{ hide: true }}>DEWORA</Row>}
         </Row>
 
         <Row fillWidth horizontal="center">
