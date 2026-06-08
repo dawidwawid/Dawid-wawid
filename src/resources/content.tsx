@@ -22,25 +22,24 @@ const social: Social = [
   // Uzupełnij swoje linki (to są bezpieczne placeholdery)
   {
     name: "Instagram",
-    icon: "instagram",
     link: "https://www.instagram.com/dewora_pl",
     essential: true,
   },
   {
     name: "TikTok",
-    icon: "tiktok",
+   
     link: "https://www.tiktok.com/",
     essential: true,
   },
   {
     name: "YouTube",
-    icon: "youtube",
+    
     link: "https://www.youtube.com/",
     essential: false,
   },
   {
     name: "Email",
-    icon: "email",
+
     link: `mailto:${person.email}`,
     essential: true,
   },
