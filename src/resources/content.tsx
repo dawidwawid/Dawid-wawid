@@ -27,18 +27,6 @@ const social: Social = [
     essential: true,
   },
   {
-    name: "TikTok",
-    icon: "TikTok",
-    link: "https://www.tiktok.com/",
-    essential: true,
-  },
-  {
-    name: "YouTube",
-    icon: "Youtube",
-    link: "https://www.youtube.com/",
-    essential: false,
-  },
-  {
     name: "Email",
 
     link: `mailto:${person.email}`,
