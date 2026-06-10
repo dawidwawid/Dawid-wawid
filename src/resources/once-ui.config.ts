@@ -142,7 +142,7 @@ const effects: EffectsConfig = {
 
 const mailchimp: MailchimpConfig = {
   // wklej tutaj swój prawdziwy URL z Mailchimp (action z embedu formularza)
-  action: "https://YOUR_MAILCHIMP_URL/subscribe/post?u=XXX&id=YYY",
+  action: "https://formspree.io/f/mpqejzvw",
   effects: {
     mask: {
       cursor: true,
