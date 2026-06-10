@@ -106,7 +106,7 @@ const about: About = {
         ],
         images: [
           {
-            src: "/images/projects/project-01/cover-01.jpg",
+            src: "/images/gallery/onas1.PNG",
             alt: "DEWORA Digital — analiza i strategia",
             width: 16,
             height: 9,
@@ -165,7 +165,7 @@ const about: About = {
         ],
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
+            src: "/images/gallery/onas2.PNG",
             alt: "DEWORA Digital — strony internetowe",
             width: 16,
             height: 9,
@@ -186,7 +186,7 @@ const about: About = {
         ],
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
+            src: "/images/gallery/onas3.PNG",
             alt: "DEWORA Digital — marketing i AI",
             width: 16,
             height: 9,
