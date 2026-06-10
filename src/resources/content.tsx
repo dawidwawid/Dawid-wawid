@@ -8,7 +8,7 @@ const person: Person = {
   role: "Web Development | Digital Marketing | AI Solutions",
   avatar: "/images/avatar.jpg",
   email: "home@dewora.pl",
-  location: "Europe/Gorzów Wlkp.",
+  location: "Europe/Warsaw",
   languages: ["Polski", "English"],
 };
 
