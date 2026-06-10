@@ -84,7 +84,7 @@ export default async function Project({
           post.metadata.image || `/api/og/generate?title=${encodeURIComponent(post.metadata.title)}`
         }
         author={{
-          name: "IT’S FRACTAL",
+          name: "DEWORA DIGITAL",
           url: `${baseURL}${about.path}`,
           image: `${baseURL}${person.avatar}`,
         }}
