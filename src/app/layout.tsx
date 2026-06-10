@@ -18,12 +18,12 @@ import { baseURL, effects, fonts, style, dataStyle } from "@/resources";
 
 export async function generateMetadata() {
   return Meta.generate({
-    title: "IT’S FRACTAL — Premium Automotive Studio",
+    title: "DEWORA Digital - Tworzymy cyfrową przewagę",
     description:
-      "PPF • Detailing • Tuning • Carbon • Indywidualne projekty. Premium modyfikacje i ochrona aut — precyzja, jakość, efekt.",
+      "Projektujemy strony internetowe, sklep e-commerce, branding i automatyzacje AI. Łączymy design, technologię, i strategię, aby pomagać firmom zdobywać klientów i rozwijać biznes.",
     baseURL: baseURL,
     path: "/",
-    image: `/api/og/generate?title=${encodeURIComponent("IT’S FRACTAL")}`,
+    image: `/api/og/generate?title=${encodeURIComponent("DEWORA Digital")}`,
   });
 }
 
