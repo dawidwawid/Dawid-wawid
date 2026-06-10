@@ -189,14 +189,14 @@ const mailchimp: MailchimpConfig = {
 const schema: SchemaConfig = {
   logo: "/images/logo.svg",
   type: "Organization",
-  name: "IT’S FRACTAL",
+  name: "DEWORA Digital",
   description: home.description,
-  email: "kontakt@itsfractal.pl",
+  email: "home@dewora.pl",
 };
 
 // social links
 const sameAs = {
-  instagram: "https://www.instagram.com/its.fractal",
+  instagram: "https://www.instagram.com/dewora_pl",
   tiktok: "https://www.tiktok.com/",
   youtube: "https://www.youtube.com/",
 } as unknown as SameAsConfig;
